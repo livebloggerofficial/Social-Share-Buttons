@@ -1,0 +1,57 @@
+.social-share-container a {
+  text-decoration: none;
+  padding: 16px 12px;
+}
+
+.social-share-container a img {
+  height: 32px;
+  transition: all 300ms ease;
+}
+
+.social-share-container a:hover img {
+  transform: scale(1.2);
+}
+
+.social-share-container {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  background: #fff;
+  box-shadow: 0 4px 40px -8px rgba(0, 0, 0, 0.3);
+  border-radius: 0 8px 8px 0;
+}
+
+.toast {
+  font-family: "Roboto", sans-serif;
+  background: #222;
+  color: #fff;
+  width: fit-content;
+  border-radius: 8px;
+  padding: 12px 32px;
+  position: fixed;
+  bottom: 40px;
+  left: 50%;
+  transform: translate(-50%, 100px);
+  opacity: 0;
+  transition: all 300ms ease;
+}
+
+.toast.active {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+@media (max-width: 900px) {
+  .social-share-container {
+    left: 50%;
+    transform: translateX(-50%);
+    top: unset;
+    bottom: 0;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+  }
+}
